@@ -10,7 +10,6 @@ function LandingPage() {
     <>
       <div margin-bottom={40}>
         <h1>LandingPage</h1>
-        <p>{import.meta.env.VITE_TEST_OPEN_WEATHER_API_KEY}</p>
         <Container>
           <Grid container spacing={2}>
             <Grid item xs={12} md={8}>

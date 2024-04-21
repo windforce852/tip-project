@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { OPEN_WEATHER_API_KEY } from '../Constansts/Constansts';
 
 // Custom hook that mounted on <WeatherApp/>, it will fire when WeatherApp render
 // It will fetch the Open Weather API in a async manner, store the returned json to weatherData for parsing in WeatherApp

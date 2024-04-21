@@ -33,9 +33,9 @@ The MainContainer will render LandingPage because the route after localhost:5173
 **WE ARE USING REACT ROUTER V6, remember to contain the version when asking GPT**  
 
 4. For how to jump between page
-- Refer to MainContainer.jsx (commit at 2024-04-21, "Foundation setup")
+- Refer to MainContainer.jsx (commit at 2024-04-21, "main-foundation-v2")
 
-5. For how to show different Component based on state, refer to the buttons in App Bar in MainContainer.jsx (commit at 2024-04-21, "Foundation setup")
+5. For how to show different Component based on state, refer to the buttons in App Bar in MainContainer.jsx (commit at 2024-04-21, "main-foundation-v2")
 
 6. For styling:
 - global config should be added in index.css (discuss with teams before editing global config)
@@ -45,10 +45,10 @@ The MainContainer will render LandingPage because the route after localhost:5173
   - MUI library has been installed
   - **WE ARE USING MUI V5**
   - For styling of the page and component you are working at, consider use MUI first and then with in-line css to adjust inside your script.
-  - Refer to LandingPage.jsx for some basic usage of MUI component and layout (commit at 2024-04-21, "Foundation setup")
+  - Refer to LandingPage.jsx for some basic usage of MUI component and layout (commit at 2024-04-21, "main-foundation-v2")
 
 7. For calling API and show the data in React:
-- Refer to WeatherApp.jsx, it mounted the custom hook useOpenWeather that fetch data from OpenWeather, and render the data to WeatherApp. (commit at 2024-04-21, "Foundation setup")
+- Refer to WeatherApp.jsx, it mounted the custom hook useOpenWeather that fetch data from OpenWeather, and render the data to WeatherApp. (commit at 2024-04-21, "main-foundation-v2")
 
 8. For storing API KEY and secret:
 - It should be stored in .env
