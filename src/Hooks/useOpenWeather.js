@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 // It will fetch the Open Weather API in a async manner, store the returned json to weatherData for parsing in WeatherApp
 // API doc: https://openweathermap.org/forecast5
 // Use Postman to test the API to understand what JSON format it returned
-const useWeather = (city) => {
+const useWeather = () => {
   const [weatherData, setWeatherData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
