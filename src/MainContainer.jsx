@@ -13,17 +13,15 @@ function MainContainer({ children }) {
   const handleCitizenLogin = () => {
     navigate('/citizen-login');
   };
-
+  const handleBackToLanding = () => {
+    navigate('/');
+  };
 
   return(
     <div style={{ background: '#121212', minHeight: '100vh', color: 'white' }}>
       <AppBar position="static">
         <Toolbar>
-          {/* <Typography variant="h6">
-            Flood Prediction System
-          </Typography> */}
-
-          <Button color="inherit" size="large">Flood Prediction System</Button>
+          <Button color="inherit" size="large" onClick={handleBackToLanding}>Flood Prediction System</Button>
 
           <div style={{ marginLeft: 'auto' }}>
             {loginStatus === "notLoggedIn" && (
