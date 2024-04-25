@@ -1,0 +1,12 @@
+{
+    "rainfall_data": [
+      {"date": "2023-04-18", "rainfall_mm": 5.2},
+      {"date": "2023-04-19", "rainfall_mm": 7.8},
+      {"date": "2023-04-20", "rainfall_mm": 3.4},
+      {"date": "2023-04-21", "rainfall_mm": 10.0},
+      {"date": "2023-04-22", "rainfall_mm": 72.1},
+      {"date": "2023-04-23", "rainfall_mm": 30.5},
+      {"date": "2023-04-24", "rainfall_mm": 6.7}
+    ]
+  }
+  

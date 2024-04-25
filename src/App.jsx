@@ -13,10 +13,21 @@ import '@fontsource/roboto/400.css';
 import '@fontsource/roboto/500.css';
 import '@fontsource/roboto/700.css';
 
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+import CssBaseline from '@mui/material/CssBaseline';
+
 function App() {
+
+  const darkTheme = createTheme({
+    palette: {
+      mode: 'dark',
+    },
+  });
 
   return (
     <>
+    <ThemeProvider theme={darkTheme}>
+    <CssBaseline />
     <Router>
       <MainContainer>
         <Routes>
@@ -30,6 +41,7 @@ function App() {
         </Routes>
       </MainContainer>
     </Router>
+    </ThemeProvider>
     </>
   )
 }
