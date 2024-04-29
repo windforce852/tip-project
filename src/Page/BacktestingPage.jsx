@@ -5,8 +5,14 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import FloodProbability24hr from '../Components/FloodProbaility24hr';
 import Last7DaysRainfallChart from '../Components/Last7DaysRainfallChart';
 import Last30DaysRainfallChart from '../Components/Last30DaysRainfallChart';
+import useHistDistrictRainfall from '../Hooks/useHistDistrictRainfall';
+import DistrictRainfallNum from '../Components/DistrictRainfallNum';
+import DistrictRainfallMap from '../Components/DistrictRainfallMap';
+import DatasetPanel from '../Components/DatasetPanel';
 
 function BacktestingPage() {
+
+  const { rainfall, loading, error } = useHistDistrictRainfall();
 
     return (
       <>
@@ -29,19 +35,25 @@ function BacktestingPage() {
               <FloodProbability24hr/>
             </Grid>
 
-
+            <Grid item xs={12} md={6}>
+              <DatasetPanel/>
+            </Grid>
           </Grid>
 
           <Grid container spacing={2}>
             <Grid item xs={12} md={4}>
-              <Last7DaysRainfallChart/>
+              <DistrictRainfallNum currentWeather={rainfall} loading={loading} error={error}/>
             </Grid>
 
-            <Grid item xs={12} md={8}>
-              <Last30DaysRainfallChart/>
+            <Grid item xs={12} md={8} style={{ width: "100%", height: "100%" }}>
+              <DistrictRainfallMap/>
             </Grid>
           </Grid>
 
+
+          <Grid container spacing={2}>
+
+          </Grid>
         </Container>
       </div>
       </>

@@ -1,5 +1,11 @@
 function CitizenSignupPage() {
 
+    //Card div
+      //Card Head
+      //Text Input email
+      //Text Input pw
+
+
     return (
       <>
       <div>
