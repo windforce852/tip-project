@@ -54,16 +54,15 @@ function WeatherApp() {
         alignItems="center"
         justifyContent="center"
         sx={{
-          borderRadius: "4px",
+          borderRadius: "8px",
           background: "#2b838f",
           p: 2,
-          borderRadius: "50px",
           // backgroundColor: "#e0e0e0",
-          boxShadow: "2px 2px 6px #bebebe, -2px -2px 6px #ffffff",
-          "&:hover": {
-            transform: "translateY(-5px)",
-            transition: "transform 0.3s ease",
-          },
+          // boxShadow: "2px 2px 6px #bebebe, -2px -2px 6px #ffffff",
+          // "&:hover": {
+          //   transform: "translateY(-5px)",
+          //   transition: "transform 0.3s ease",
+          // },
         }}
       >
         <Typography variant="h4" gutterBottom>

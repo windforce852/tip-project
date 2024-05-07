@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, CardContent, Typography, Box, Tooltip } from "@mui/material";
+import { Card, CardContent, Typography, Box, Tooltip, styled } from "@mui/material";
 import use1DayWeather from "../Hooks/use1DayWeather";
 
 function OneDayWeatherForecast() {
@@ -14,7 +14,7 @@ function OneDayWeatherForecast() {
 
     if (maxTemp > 30) {
       return "Too Hot";
-    } else if (minTemp < 15) {
+    } else if (minTemp < 10) {
       return "Too Cold";
     } else {
       return conditions;
@@ -23,7 +23,7 @@ function OneDayWeatherForecast() {
 
   if (loading) {
     return (
-      <Card sx={{ background: "#2b838f", width: "100%", height: "220px" }}>
+      <Card sx={{ background: "#212121", width: "100%", height: "250px" }}>
         <CardContent>
           <Typography variant="h5">Loading...</Typography>
         </CardContent>
@@ -34,7 +34,7 @@ function OneDayWeatherForecast() {
   if (error) {
     return (
       <Card
-        fa-stack-2x={{ background: "#2b838f", width: "100%", height: "220px" }}
+        fa-stack-2x={{ background: "#212121", width: "100%", height: "250px" }}
       >
         <CardContent>
           <Typography variant="h5">Error:</Typography>
@@ -64,10 +64,12 @@ function OneDayWeatherForecast() {
     );
   };
 
+
   return (
-    <Card sx={{ background: "#2b838f", width: "100%", height: "220px" }}>
+    <Card sx={{ background: "#2b838f", width: "100%", height: "250px"}}>
       <CardContent>
-        <Typography variant="h4">One Day Weather </Typography>
+        <Typography variant="h4" style={{fontWeight: 'bold'}}>One Day Weather </Typography>
+        {/* <h2>One Day Weather </h2> */}
         <Box sx={{ display: "flex" }}>
           <strong>Weather Rating: </strong>
 

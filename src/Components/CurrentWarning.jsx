@@ -20,12 +20,12 @@ function CurrentWarning() {
         sx={{
           background: currentWeather?.warningMessage ? "red" : "green",
           width: "100%",
-          height: "220px",
+          height: "250px",
         }}
       >
         <CardActionArea>
           <CardContent>
-            <Typography gutterBottom variant="h5">
+            <Typography gutterBottom variant="h4" style={{fontWeight: 'bold'}}>
               {currentWeather?.warningMessage || "No current warnings"}
             </Typography>
             {currentWeather?.warningMessage && (
