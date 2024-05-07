@@ -1,0 +1,79 @@
+{
+  "rainfall": {
+    "data": [
+      {
+        "place": "Central & Western District",
+        "max": 2
+      },
+      {
+        "place": "Eastern District",
+        "max": 1
+      },
+      {
+        "place": "Kwai Tsing",
+        "max": 3
+      },
+      {
+        "place": "Islands District",
+        "max": 6
+      },
+      {
+        "place": "North District",
+        "max": 60
+      },
+      {
+        "place": "Sai Kung",
+        "max": 40
+      },
+      {
+        "place": "Sha Tin",
+        "max": 2
+      },
+      {
+        "place": "Southern District",
+        "max": 122
+      },
+      {
+        "place": "Tai Po",
+        "max": 1
+      },
+      {
+        "place": "Tsuen Wan",
+        "max": 2
+      },
+      {
+        "place": "Tuen Mun",
+        "max": 2
+      },
+      {
+        "place": "Wan Chai",
+        "max": 1
+      },
+      {
+        "place": "Yuen Long",
+        "max": 2,
+        "min": 0
+      },
+      {
+        "place": "Yau Tsim Mong",
+        "max": 2
+      },
+      {
+        "place": "Sham Shui Po",
+        "max": 2
+      },
+      {
+        "place": "Kowloon City",
+        "max": 1
+      },
+      {
+        "place": "Wong Tai Sin",
+        "max": 2
+      },
+      {
+        "place": "Kwun Tong",
+        "max": 2
+      }
+    ]
+  }
+}
