@@ -25,14 +25,14 @@ function WeatherIcon() {
           className="iconify iconify--emojione"
           role="img"
           aria-hidden="true"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 64 64"
         >
-          <g stroke-width="0" id="SVGRepo_bgCarrier"></g>
+          <g strokeWidth="0" id="SVGRepo_bgCarrier"></g>
           <g
-            stroke-linejoin="round"
-            stroke-linecap="round"
+            strokeLinejoin="round"
+            strokeLinecap="round"
             id="SVGRepo_tracerCarrier"
           ></g>
           <g id="SVGRepo_iconCarrier">
