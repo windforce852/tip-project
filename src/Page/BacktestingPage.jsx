@@ -9,6 +9,7 @@ import useHistDistrictRainfall from '../Hooks/useHistDistrictRainfall';
 import DistrictRainfallNum from '../Components/DistrictRainfallNum';
 import DistrictRainfallMap from '../Components/DistrictRainfallMap';
 import DatasetPanel from '../Components/DatasetPanel';
+import DistrictRainfallNumHor from '../Components/DistrictRainfallNumHor';
 
 function BacktestingPage() {
 
@@ -29,7 +30,6 @@ function BacktestingPage() {
           </Grid>
 
 
-          
           <Grid container spacing={2}>
             <Grid item xs={12} md={6}>
               <FloodProbability24hr/>
@@ -40,14 +40,27 @@ function BacktestingPage() {
             </Grid>
           </Grid>
 
+
           <Grid container spacing={2}>
-            <Grid item xs={12} md={4}>
-              <DistrictRainfallNum currentWeather={rainfall} loading={loading} error={error}/>
+            <Grid item xs={12} md={6}>
+              <Last7DaysRainfallChart/>
             </Grid>
 
-            <Grid item xs={12} md={8} style={{ width: "100%", height: "100%" }}>
-              <DistrictRainfallMap/>
+            <Grid item xs={12} md={6}>
+              <Last30DaysRainfallChart/>
             </Grid>
+          </Grid>
+
+
+
+          <Grid container spacing={2}>
+            <Grid item xs={12} md={12}>
+              <DistrictRainfallNumHor currentWeather={rainfall} loading={loading} error={error}/>
+            </Grid>
+
+            {/* <Grid item xs={12} md={8} style={{ width: "100%", height: "100%" }}>
+              <DistrictRainfallMap/>
+            </Grid> */}
           </Grid>
 
 
