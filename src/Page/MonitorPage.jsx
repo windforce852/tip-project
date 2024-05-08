@@ -6,6 +6,8 @@ import FloodProbability1hr from'../Components/FloodProbability1hr'
 import FloodWarningTogglePanel from '../Components/FloodWarningTogglePanel'
 import DistrictRainfallNum from '../Components/DistrictRainfallNum'
 import DistrictRainfallMap from '../Components/DistrictRainfallMap'
+import DistrictRainfallMap2 from '../Components/DistrictRainfallMap2';
+import DistrictRainfallMap3 from '../Components/DistrictRainfallMap3';
 
 import useGovCurrentWeather from "../Hooks/useGovCurrentWeather"
 
@@ -54,7 +56,7 @@ function MonitorPage() {
 
           <Grid container spacing={2}> */}
             <Grid item xs={12} md={8} style={{ width: "100%", height: "100%" }}>
-              <DistrictRainfallMap/>
+              <DistrictRainfallMap3/>
             </Grid>
           </Grid>
 

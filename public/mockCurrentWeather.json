@@ -22,7 +22,7 @@
             {
                 "unit": "mm",
                 "place": "Central & Western District",
-                "max": 2,
+                "max": 60,
                 "min": 1,
                 "main": "FALSE"
             },
@@ -57,14 +57,14 @@
             {
                 "unit": "mm",
                 "place": "Sai Kung",
-                "max": 40,
+                "max": 60,
                 "min": 0,
                 "main": "FALSE"
             },
             {
                 "unit": "mm",
                 "place": "Sha Tin",
-                "max": 2,
+                "max": 20,
                 "min": 0,
                 "main": "FALSE"
             },
@@ -78,7 +78,7 @@
             {
                 "unit": "mm",
                 "place": "Tai Po",
-                "max": 1,
+                "max": 100,
                 "min": 0,
                 "main": "FALSE"
             },
@@ -99,14 +99,14 @@
             {
                 "unit": "mm",
                 "place": "Wan Chai",
-                "max": 1,
+                "max": 60,
                 "min": 0,
                 "main": "FALSE"
             },
             {
                 "unit": "mm",
                 "place": "Yuen Long",
-                "max": 2,
+                "max": 150,
                 "min": 0,
                 "main": "FALSE"
             },
