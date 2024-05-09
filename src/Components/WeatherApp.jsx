@@ -12,12 +12,11 @@ import Forecast from "./Forecast";
 
 function WeatherApp() {
   const { weatherData, loading, error } = useWeather();
-  console.log(weatherData);
 
   if (loading) {
     return (
       <div style={{ background: "#2b838f", width: "100%", height: "300px" }}>
-        <div>Loading...</div>;
+        <div>Loading...</div>
       </div>
     );
   }
@@ -42,9 +41,11 @@ function WeatherApp() {
   const firstDayWeather = list[0];
   const { dt, main, weather, wind } = firstDayWeather;
   const { temp, humidity } = main;
-  const { description } = weather;
-  const { speed } = wind;
+  const weatherMain = weather.length > 0 ? weather[0].main : "Not available";
+  const description =
+    weather.length > 0 ? weather[0].description : "Not available";
 
+  const { speed } = wind;
   return (
     <>
       <Grid
@@ -78,7 +79,7 @@ function WeatherApp() {
         >
           {" "}
           <Box>
-            <WeatherIcon />
+            <WeatherIcon type={weatherMain} style={{ fontSize: "5rem" }} />
           </Box>
           <Box>
             <List>
