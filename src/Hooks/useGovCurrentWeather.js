@@ -12,7 +12,7 @@ const useGovCurrentWeather = () => {
       const mockURL = '/mockCurrentWeather.json'
 
       try {
-        const response = await fetch(mockURL);
+        const response = await fetch(apiUrl);
         const data = await response.json();
         console.log("useGovCurrentWeather Data:")
         console.log(data)

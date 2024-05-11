@@ -28,7 +28,7 @@ export function RainfallBox( {district, rainfall}) {
             marginBlockStart: '0',
             marginBlockEnd: '0'
           }}>
-            {`${ rainfall ? rainfall: "rainfall" }`}
+            {`${ rainfall ? rainfall: "null" }`}
           </h2>
 
       </div>
@@ -64,7 +64,8 @@ function DistrictRainfallNum( {currentWeather, loading, error} ) {
     )
   }
 
-  console.log(`"DistrictRainfallNum: ${currentWeather}`)
+  console.log(`"DistrictRainfallNum: `)
+  console.log(currentWeather)
   const { rainfall } = currentWeather;
   const { data } = rainfall; 
 
@@ -72,7 +73,7 @@ function DistrictRainfallNum( {currentWeather, loading, error} ) {
     <>
     <div style={{ background: '#212121', width: '100%', height: '840px', border: '2px solid #2196f3', marginTop: '20px', borderRadius: '8px' }}>
       <h2 style={{ paddingLeft: '8px' }}>
-        {`Last 1h Districts Rainfall(mm)`}
+        {`Current Districts Rainfall(mm)`}
       </h2>
 
       <div style={{
@@ -84,8 +85,8 @@ function DistrictRainfallNum( {currentWeather, loading, error} ) {
         maxWidth: '600px',
       }}>
 
-        {data.map((entry, index) => (
-          <RainfallBox key={index} district={entry.place} rainfall={entry.max} />
+        {data.map((item, index) => (
+          <RainfallBox key={index} district={item.place} rainfall={item.max.toString()} />
         ))}
 
       </div>

@@ -47,6 +47,9 @@ function DistrictRainfallMap3() {
     const colors = []
     const districts = []
 
+    let weatherData = {}
+    let geoData = {}
+
     if (map.current) return; 
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
@@ -59,13 +62,35 @@ function DistrictRainfallMap3() {
 
     map.current.on('load', async() => {
 
-      //fetch current weather
-      const weatherResponse = await fetch('/mockCurrentWeather.json');
-      const weatherData = await weatherResponse.json();
+      // //fetch current weather
+      // const weatherResponse = await fetch('/mockCurrentWeather.json');
+      // const weatherData = await weatherResponse.json();
 
-      //fetch geoJson
-      const geoResponse = await fetch('/districtsBoundariesIndented.geojson');
-      const geoData = await geoResponse.json();
+      // //fetch geoJson
+      // const geoResponse = await fetch('/districtsBoundariesIndented.geojson');
+      // const geoData = await geoResponse.json();
+
+      try {
+        //fetch current weather
+        // const weatherResponse = await fetch('/mockCurrentWeather.json');
+        const weatherResponse = await fetch('https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=en');
+        if (!weatherResponse.ok) {
+          console.log('Failed to fetch current weather data');
+        }
+        weatherData = await weatherResponse.json();
+    
+        //fetch geoJson
+        const geoResponse = await fetch('/districtsBoundariesIndented.geojson');
+        if (!geoResponse.ok) {
+          console.log('Failed to fetch geoJson data');
+        }
+        geoData = await geoResponse.json();
+    
+      } catch (error) {
+        console.log('Error fetching data:', error.message);
+      }
+
+
 
       map.current.addSource('districts', {
         type: 'geojson',
@@ -75,35 +100,33 @@ function DistrictRainfallMap3() {
       // Use the mapping table to relate weather data to geojson features
       geoData.features.forEach(feature => {
         const districtName = feature.properties.PDD_Eng;
-        console.log(`districtName: ${districtName}`)
+        // console.log(`districtName: ${districtName}`)
         districts.push(districtName)
 
         const weatherPlace = Object.keys(districtMapping).find(key => districtMapping[key].includes(districtName));
-        console.log(`weatherPlace: ${weatherPlace}`)
+        // console.log(`weatherPlace: ${weatherPlace}`)
 
         const weather = weatherData.rainfall.data.find(d => d.place === weatherPlace);
-        console.log(`weather: ${weather}`)
+        // console.log(`weather: ${weather}`)
 
         const maxRainfall = weather ? weather.max : 0;
-        console.log(`maxRainfall: ${maxRainfall}`)
+        // console.log(`maxRainfall: ${maxRainfall}`)
 
         const color = getColor(maxRainfall)
 
-        console.log(`$color: ${color}`)
+        // console.log(`$color: ${color}`)
         colors.push(color)
 
       });
 
-      // setColorArray(colors)
-      console.log(`colors: ${colors}`)
-      console.log(`colors length: ${colors.length}`)
+      // console.log(`colors: ${colors}`)
+      // console.log(`colors length: ${colors.length}`)
 
-      // setDistrictArray(districts)
-      console.log(`districts: ${districts}`)
-      console.log(`districts length: ${districts.length}`)
+      // console.log(`districts: ${districts}`)
+      // console.log(`districts length: ${districts.length}`)
 
       for (let i = 0; i < districts.length; i++){
-        console.log(`in for loop, district:${districts[i]}, color"${colors[i]}`)
+        // console.log(`in for loop, district:${districts[i]}, color"${colors[i]}`)
 
         map.current.addLayer({
             id: uuidv4(),
