@@ -7,8 +7,9 @@ function CitizenHomePage() {
     return (
       <>
       <div>
-        <h1>Citizen Home Page</h1>
-        <Container>
+
+       <h1>Citizen Home Page</h1>
+        <Container> 
         <Grid container spacing={2}>
             <Grid item xs={12}>
               <EmailSetting/>
