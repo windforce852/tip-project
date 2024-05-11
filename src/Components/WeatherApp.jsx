@@ -12,12 +12,11 @@ import Forecast from "./Forecast";
 
 function WeatherApp() {
   const { weatherData, loading, error } = useWeather();
-  console.log(weatherData);
 
   if (loading) {
     return (
       <div style={{ background: "#2b838f", width: "100%", height: "300px" }}>
-        <div>Loading...</div>;
+        <div>Loading...</div>
       </div>
     );
   }
@@ -42,9 +41,11 @@ function WeatherApp() {
   const firstDayWeather = list[0];
   const { dt, main, weather, wind } = firstDayWeather;
   const { temp, humidity } = main;
-  const { description } = weather;
-  const { speed } = wind;
+  const weatherMain = weather.length > 0 ? weather[0].main : "Not available";
+  const description =
+    weather.length > 0 ? weather[0].description : "Not available";
 
+  const { speed } = wind;
   return (
     <>
       <Grid
@@ -55,7 +56,9 @@ function WeatherApp() {
         justifyContent="center"
         sx={{
           borderRadius: "8px",
-          background: "#2b838f",
+          background: "#212121",
+          minWidth: '600px',
+          height: '500px',
           p: 2,
           // backgroundColor: "#e0e0e0",
           // boxShadow: "2px 2px 6px #bebebe, -2px -2px 6px #ffffff",
@@ -65,7 +68,7 @@ function WeatherApp() {
           // },
         }}
       >
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h4" gutterBottom style={{fontWeight: 'bold'}}>
           Today Weather
         </Typography>
         <Grid
@@ -78,23 +81,23 @@ function WeatherApp() {
         >
           {" "}
           <Box>
-            <WeatherIcon />
+            <WeatherIcon type={weatherMain} style={{ fontSize: "5rem" }} />
           </Box>
           <Box>
             <List>
               <ListItem>
-                <ListItemText
+                <ListItemText style={{fontWeight: 'bold'}}
                   primary={`Temperature: ${(temp - 273.15).toFixed(2)}°C`}
                 />
               </ListItem>
               <ListItem>
-                <ListItemText primary={`Humidity: ${humidity}%`} />
+                <ListItemText style={{fontWeight: 'bold'}} primary={`Humidity: ${humidity}%`} />
               </ListItem>
               <ListItem>
-                <ListItemText primary={`Weather: ${description}`} />
+                <ListItemText style={{fontWeight: 'bold'}} primary={`Weather: ${description}`} />
               </ListItem>
               <ListItem>
-                <ListItemText primary={`Wind speed: ${speed} m/s`} />
+                <ListItemText style={{fontWeight: 'bold'}} primary={`Wind speed: ${speed} m/s`} />
               </ListItem>
             </List>
           </Box>
