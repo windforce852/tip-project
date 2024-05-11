@@ -1,0 +1,128 @@
+[
+  {
+    "Central and Western": {
+      "name": "Western District Community Centre",
+      "address": "36A Western Street, Sai Ying Pun",
+      "phone": "2119 5001"
+    }
+  },
+  {
+    "Eastern": {
+      "name": "Causeway Bay Community Centre",
+      "address": "7 Fook Yum Road, Causeway Bay",
+      "phone": "3104 2304"
+    }
+  },
+  {
+    "Southern": {
+      "name": "Wah Kwai Community Centre",
+      "address": "Wah Kwai Estate, Kellett Bay, Hong Kong",
+      "phone": "2551 0111"
+    }
+  },
+  {
+    "Wan Chai": {
+      "name": "Leighton Hill Community Hall",
+      "address": "133 Wong Nai Chung Road, Happy Valley",
+      "phone": "3422 3068"
+    }
+  },
+  {
+    "Kowloon City": {
+      "name": "Hung Hom Community Hall",
+      "address": "UG/F & 1/F, Kowloon City Government Offices, 42 Bailey Street, Hung Hom, Kowloon",
+      "phone": "2365 6475"
+    }
+  },
+  {
+    "Yau Tsim Mong": {
+      "name": "Henry G. Leong Yaumatei Community Centre",
+      "address": "60 Public Square Street, Yau Ma Tei",
+      "phone": "2770 0404"
+    }
+  },
+  {
+    "Sham Shui Po": {
+      "name": "Cheung Sha Wan Community Centre",
+      "address": "55 Fat Tseung Street, Cheung Sha Wan",
+      "phone": "2361 7787"
+    }
+  },
+  {
+    "Wong Tai Sin": {
+      "name": "Wong Tai Sin Community Centre",
+      "address": "104 Ching Tak Street, Wong Tai Sin",
+      "phone": "2323 4347"
+    }
+  },
+  {
+    "Kwun Tong": {
+      "name": "Kwun Tong Community Centre",
+      "address": "17 Tsui Ping Road, Kwun Tong",
+      "phone": "2345 6739"
+    }
+  },
+  {
+    "Tai Po": {
+      "name": "Tai Po Community Centre",
+      "address": "No. 2, Heung Sze Wui Street, Tai Po",
+      "phone": "2653 4220"
+    }
+  },
+  {
+    "Yuen Long": {
+      "name": "Tin Yiu Community Centre",
+      "address": "Tin Yiu Estate, Tin Shui Wai",
+      "phone": "2445 4442"
+    }
+  },
+  {
+    "Tuen Mun": {
+      "name": "On Ting/Yau Oi Community Centre",
+      "address": "On Ting Estate, Tuen Mun",
+      "phone": "2451 9759"
+    }
+  },
+  {
+    "North": {
+      "name": "North District Community Centre",
+      "address": "2 Lung Wan Street, Sheung Shui",
+      "phone": "2652 6574"
+    }
+  },
+  {
+    "Sai Kung": {
+      "name": "King Lam Neighbourhood Community Centre",
+      "address": "King Lam Estate, Tseung Kwan O, New Territories",
+      "phone": "2703 5440"
+    }
+  },
+  {
+    "Sha Tin": {
+      "name": "Heng On Estate Community Centre",
+      "address": "Heng On Estate, Ma On Shan",
+      "phone": "2642 5135"
+    }
+  },
+  {
+    "Tsuen Wan": {
+      "name": "Princess Alexandra Community Centre",
+      "address": "60 Tai Ho Road, Tsuen Wan",
+      "phone": "2490 4994"
+    }
+  },
+  {
+    "Kwai Tsing": {
+      "name": "Cheung Ching Community Hall",
+      "address": "P1/F, Ching Ho House, Cheung Ching Estate, Tsing Yi",
+      "phone": "2435 3999"
+    }
+  },
+  {
+    "Islands": {
+      "name": "Discovery Bay Community Hall",
+      "address": "99 Siena Ave, Discovery Bay",
+      "phone": "2259 3252"
+    }
+  }
+]
