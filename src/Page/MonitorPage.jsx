@@ -22,11 +22,11 @@ function MonitorPage() {
         <Container>
           {/* First Row */}
           <Grid container spacing={2}>
-            <Grid item xs={12} md={3}>
+            {/* <Grid item xs={12} md={3}>
               <CurrentWarning/>
-            </Grid>
+            </Grid> */}
 
-            <Grid item xs={12} md={3}>
+            <Grid item xs={12} md={6}>
               <TideLevel />
             </Grid>
 

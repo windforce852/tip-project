@@ -66,9 +66,9 @@ function OneDayWeatherForecast() {
 
 
   return (
-    <Card sx={{ background: "#2b838f", width: "100%", height: "250px"}}>
+    <Card sx={{ background: "#212121", width: "100%", height: "250px"}}>
       <CardContent>
-        <Typography variant="h4" style={{fontWeight: 'bold'}}>One Day Weather </Typography>
+        <Typography variant="h4" style={{fontWeight: 'bold', fontSize:'28px'}}>1 Day Weather Forecast</Typography>
         {/* <h2>One Day Weather </h2> */}
         <Box sx={{ display: "flex" }}>
           <strong>Weather Rating: </strong>
