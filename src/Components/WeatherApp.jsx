@@ -56,7 +56,9 @@ function WeatherApp() {
         justifyContent="center"
         sx={{
           borderRadius: "8px",
-          background: "#2b838f",
+          background: "#212121",
+          minWidth: '600px',
+          height: '500px',
           p: 2,
           // backgroundColor: "#e0e0e0",
           // boxShadow: "2px 2px 6px #bebebe, -2px -2px 6px #ffffff",
@@ -66,7 +68,7 @@ function WeatherApp() {
           // },
         }}
       >
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h4" gutterBottom style={{fontWeight: 'bold'}}>
           Today Weather
         </Typography>
         <Grid
@@ -84,18 +86,18 @@ function WeatherApp() {
           <Box>
             <List>
               <ListItem>
-                <ListItemText
+                <ListItemText style={{fontWeight: 'bold'}}
                   primary={`Temperature: ${(temp - 273.15).toFixed(2)}°C`}
                 />
               </ListItem>
               <ListItem>
-                <ListItemText primary={`Humidity: ${humidity}%`} />
+                <ListItemText style={{fontWeight: 'bold'}} primary={`Humidity: ${humidity}%`} />
               </ListItem>
               <ListItem>
-                <ListItemText primary={`Weather: ${description}`} />
+                <ListItemText style={{fontWeight: 'bold'}} primary={`Weather: ${description}`} />
               </ListItem>
               <ListItem>
-                <ListItemText primary={`Wind speed: ${speed} m/s`} />
+                <ListItemText style={{fontWeight: 'bold'}} primary={`Wind speed: ${speed} m/s`} />
               </ListItem>
             </List>
           </Box>
