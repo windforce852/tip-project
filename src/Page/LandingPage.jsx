@@ -3,6 +3,7 @@ import { Container, Box, Grid } from '@mui/material';
 import WeatherApp from '../Components/WeatherApp';
 import FloodInstruction from '../Components/FloodInstruction';
 import FloodWarningDisplay from '../Components/FloodWarningDisplay';
+import EvacuationPoints from '../Components/EvacuationPoints';
 
 function LandingPage() {
 
@@ -24,6 +25,10 @@ function LandingPage() {
           <Grid container spacing={2}>
             <Grid item xs={12}>
               <FloodInstruction/>
+            </Grid>
+
+            <Grid item xs={12}>
+              <EvacuationPoints/>
             </Grid>
           </Grid>
         </Container>

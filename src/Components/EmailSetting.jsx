@@ -11,10 +11,10 @@ import Button from '@mui/material/Button';
 function EmailSetting() {
   const [inputs, setInputs] = useState({
     status: 'On',
-    district: 'Islands' // Default district, can adjust to users previous preference if available
+    district: 'Islands District' // Default district, can adjust to users previous preference if available
   });
   const [subscription, setSubscription] = React.useState('On');
-  const [districtSelected, setDistrictSelected] = React.useState('Islands');
+  const [districtSelected, setDistrictSelected] = React.useState('Islands District');
 
   const handleDistrictChange = (event) => {
     //const name = event.target.name;
