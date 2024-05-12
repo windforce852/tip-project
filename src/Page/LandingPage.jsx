@@ -8,8 +8,8 @@ function LandingPage() {
 
   return (
     <>
-      <div margin-bottom={40}>
-        <h1>LandingPage</h1>
+      <div style={{ marginBottom: '40px', marginTop: '60px'}} >
+        {/* <h1>LandingPage</h1> */}
         <Container>
           <Grid container spacing={2}>
             <Grid item xs={12} md={8}>
