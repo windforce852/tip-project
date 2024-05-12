@@ -36,7 +36,8 @@ function EmailSetting() {
     // If status is "Off", set district to na
     const districtValue = inputs.status === 'Off' ? 'na' : inputs.district;
     const updatedInputs = {...inputs, district: districtValue};
-    alert(JSON.stringify(updatedInputs));
+    //Shows output which needs to be sent to backend
+    //alert(JSON.stringify(updatedInputs));
 
     const xhr = new XMLHttpRequest();
 
@@ -57,12 +58,6 @@ function EmailSetting() {
 
           <h2 style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>Email Notification Settings</h2>
           <p>Below is the setting to enable email notifications about warnings for a district of your choosing. You can also change your selected district at any time by submitting the following section again.</p>
-          
-          
-
-          
-
-
           <form onSubmit={handleSubmit}>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginLeft: '300px' }}>
@@ -75,8 +70,7 @@ function EmailSetting() {
                       value={subscription}
                       label="Subscription"
                       onChange={handleStatusChange}
-                      
-                    >
+                      >                    
                       <MenuItem value={"On"}>On</MenuItem>
                       <MenuItem value={"Off"}>Off</MenuItem>
                      
@@ -125,10 +119,7 @@ function EmailSetting() {
             </div>
             </div>
           </form>
-
-
           <p>Please note you should not just rely on our notifications. While we strive to provide up-to-date notifications, you should always listen to current information being provided by emergency services.</p>
-
       </div>
     </>
   );
