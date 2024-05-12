@@ -54,10 +54,10 @@ function EmailSetting() {
 
   return (
     <>
-      <div style={{ background: '#2b838f', width: '100%', height: 'auto', justifyContent: 'center' }}>
+      <div style={{ background: '#212121', width: '100%', height: 'auto', justifyContent: 'center', borderRadius: '8px', border: '2px solid #2196f3', padding: '40px' }}>
 
           <h2 style={{ display: 'flex', flexDirection: 'column', alignItems: 'center'}}>Email Notification Settings</h2>
-          <p>Below is the setting to enable email notifications about warnings for a district of your choosing. You can also change your selected district at any time by submitting the following section again.</p>
+          <p style={{paddingLeft: '6em', paddingRight: '6em', paddingBottom: '2em'}}>Below is the setting to enable email notifications about warnings for a district of your choosing. You can also change your selected district at any time by submitting the following section again.</p>
           <form onSubmit={handleSubmit}>
             <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '5px' }}>
               <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginLeft: '300px' }}>
@@ -90,9 +90,9 @@ function EmailSetting() {
                       onChange={handleDistrictChange}
                       disabled={subscription === "Off"}
                     >
-                      <MenuItem value={"Islands"}>Islands</MenuItem>
+                      <MenuItem value={"Islands District"}>Islands District</MenuItem>
                       <MenuItem value={"Kwai Tsing"}>Kwai Tsing</MenuItem>
-                      <MenuItem value={"North"}>North</MenuItem>
+                      <MenuItem value={"North District"}>North District</MenuItem>
                       <MenuItem value={"Sai Kung"}>Sai Kung</MenuItem>
                       <MenuItem value={"Sha Tin"}>Sha Tin</MenuItem>
                       <MenuItem value={"Tai Po"}>Tai Po</MenuItem>
@@ -104,9 +104,9 @@ function EmailSetting() {
                       <MenuItem value={"Sham Shui Po"}>Sham Shui Po</MenuItem>
                       <MenuItem value={"Wong Tai Sin"}>Wong Tai Sin</MenuItem>
                       <MenuItem value={"Yau Tsim Mong"}>Yau Tsim Mong</MenuItem>
-                      <MenuItem value={"Central and Western"}>Central and Western</MenuItem>
-                      <MenuItem value={"Eastern"}>Eastern</MenuItem>
-                      <MenuItem value={"Southern"}>Southern</MenuItem>
+                      <MenuItem value={"Central and Western District"}>Central and Western District</MenuItem>
+                      <MenuItem value={"Eastern District"}>Eastern District</MenuItem>
+                      <MenuItem value={"Southern District"}>Southern District</MenuItem>
                       <MenuItem value={"Wan Chai"}>Wan Chai</MenuItem>
                     </Select>
                   </FormControl>
@@ -114,12 +114,12 @@ function EmailSetting() {
                
               </div>
             
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginRight: '300px' }}>
-            <Button variant="contained" onClick={(handleSubmit)}>Submit</Button>
+            <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', marginRight: '300px', marginLeft:'20px' }}>
+              <Button variant="contained" onClick={(handleSubmit)}>Submit</Button>
             </div>
-            </div>
+          </div>
           </form>
-          <p>Please note you should not just rely on our notifications. While we strive to provide up-to-date notifications, you should always listen to current information being provided by emergency services.</p>
+          <p style={{paddingLeft: '6em', paddingRight: '6em', paddingTop: '2em'}}>Please note you should not just rely on our notifications. While we strive to provide up-to-date notifications, you should always listen to current information being provided by emergency services.</p>
       </div>
     </>
   );
