@@ -101,7 +101,7 @@ const AuthCard = () => {
 
   const handleAdminLoginSubmit = async (event) => {
     event.preventDefault(); 
-    const success = await adminLogin(email, password);
+    const success = await Login(email, password, 'Admin', import.meta.env.VITE_TEST_ADMIN_LOGIN_ENDPOINT);
     if (success) {
       navigate('/monitor')
     } else {
@@ -109,10 +109,14 @@ const AuthCard = () => {
     }
   };
 
-  const handleCitizenLoginSubmit = (event) => {
+  const handleCitizenLoginSubmit = async (event) => {
     event.preventDefault(); 
-
-    //TODO
+    const success = await Login(email, password, 'Citizen', import.meta.env.VITE_TEST_CITIZEN_LOGIN_ENDPOINT);
+    if (success) {
+      navigate('/citizen')
+    } else {
+      console.log('Login failed')
+    }
   };
 
   const handleCitizenSignupSubmit = (event) => {
@@ -123,9 +127,9 @@ const AuthCard = () => {
 
   const { setAuth } = useAuth();
 
-  const adminLogin = async (email, password) => {
+  const Login = async (email, password, role, endpoint) => {
     try {
-      const response = await fetch(import.meta.env.VITE_TEST_ADMIN_LOGIN_ENDPOINT, {
+      const response = await fetch( endpoint, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -136,7 +140,7 @@ const AuthCard = () => {
       if (response.ok) {
         const data = await response.json();
         console.log(data)
-        setAuth({ token: data.token, role: 'Admin' }); 
+        setAuth({ token: data.token, role: role }); 
         return true;
       } else {
         console.error('Failed to login');

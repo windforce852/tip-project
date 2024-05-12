@@ -33,6 +33,13 @@ function App() {
     return auth.token && auth.role === 'Admin' ? children : <Navigate to="/" />;
   };
 
+  // Protected Route for Citizen
+  const CitizenRoute = ({ children }) => {
+    const { auth } = useAuth();
+    console.log(JSON.stringify(auth))
+    return auth.token && auth.role === 'Citizen' ? children : <Navigate to="/" />;
+  };
+
   return (
     <>
     <AuthProvider>
@@ -46,7 +53,7 @@ function App() {
           {/* <Route path="/backtesting" element={<BacktestingPage/>} /> */}
           <Route path="/monitor" element={<AdminRoute><MonitorPage /></AdminRoute>} />
           <Route path="/backtesting" element={<AdminRoute><BacktestingPage /></AdminRoute>} />
-          <Route path="/citizen" element={<CitizenHomePage/>} />
+          <Route path="/citizen" element={<CitizenRoute><CitizenHomePage/></CitizenRoute>} />
           <Route path="/citizen-login" element={<CitizenLoginPage/>} />
           <Route path="/citizen-signup" element={<CitizenSignupPage/>} />
           <Route path="/admin-login" element={<AdminLoginPage/>} />
