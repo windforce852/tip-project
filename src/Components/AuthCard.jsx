@@ -2,6 +2,9 @@ import { TextField } from '@mui/material'
 import { useState } from 'react'
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { useAuth } from './AuthContext';
+import { useNavigate } from 'react-router-dom';
+
 
 const AuthCardTitle = () => {
   return(
@@ -69,8 +72,7 @@ const AuthButton = ({ buttonTitle, onSubmit}) => {
         borderRadius: '4px',
         color: 'white',
         fontWeight: 'bold',
-        onSubmit: {onSubmit}
-      }}>
+      }} onClick={onSubmit}>
         {buttonTitle}
       </button>
     </>
@@ -84,6 +86,7 @@ const AuthCard = () => {
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const navigate = useNavigate();
 
   const location = useLocation();
   const { pathname } = location;
@@ -96,10 +99,14 @@ const AuthCard = () => {
     setPassword(event.target.value);
   };
 
-  const handleAdminLoginSubmit = (event) => {
+  const handleAdminLoginSubmit = async (event) => {
     event.preventDefault(); 
-
-    //TODO
+    const success = await adminLogin(email, password);
+    if (success) {
+      navigate('/monitor')
+    } else {
+      console.log('Login failed')
+    }
   };
 
   const handleCitizenLoginSubmit = (event) => {
@@ -113,6 +120,36 @@ const AuthCard = () => {
 
     //TODO
   };
+
+  const { setAuth } = useAuth();
+
+  const adminLogin = async (email, password) => {
+    try {
+      const response = await fetch(import.meta.env.VITE_TEST_ADMIN_LOGIN_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, password }),
+      });
+      console.log(JSON.stringify({ email, password }))
+      if (response.ok) {
+        const data = await response.json();
+        console.log(data)
+        setAuth({ token: data.token, role: 'Admin' }); 
+        return true;
+      } else {
+        console.error('Failed to login');
+      }
+    } catch(error) {
+      console.error('Login Error:', error);
+      return false;
+    }
+
+
+    
+  };
+
 
   return(
     <>
