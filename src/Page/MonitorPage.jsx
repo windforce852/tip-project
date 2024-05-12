@@ -11,6 +11,9 @@ import DistrictRainfallMap3 from '../Components/DistrictRainfallMap3';
 
 import useGovCurrentWeather from "../Hooks/useGovCurrentWeather"
 
+import { Link } from 'react-router-dom';
+
+
 function MonitorPage() {
   
   const { currentWeather, loading, error } = useGovCurrentWeather();
@@ -19,6 +22,9 @@ function MonitorPage() {
       <>
       <div>
         <h1>MonitorPage</h1>
+        <div style={{marginBottom: '20px'}}>
+          <Link to='/backtesting'>Backtesting Page</Link>  
+        </div>
         <Container>
           {/* First Row */}
           <Grid container spacing={2}>

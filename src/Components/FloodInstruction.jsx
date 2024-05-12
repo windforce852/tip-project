@@ -3,8 +3,8 @@ import useEvacuationPoints from "../Hooks/useEvacuationPoints"
 function FloodInstruction() {
 
   const { points, loading, error } = useEvacuationPoints();
-  console.log("points: ")
-  console.log(points)
+  // console.log("points: ")
+  // console.log(points)
 
   return (
     <>
@@ -37,34 +37,7 @@ function FloodInstruction() {
           <p>For emergencies, dial 999.</p>
         </div>
 
-
-        <div style={{display: 'flex', justifyContent: 'center', paddingTop: '20px'}}>
-          <h1>Evacuation Points</h1>
-        </div>
-        <div style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'start', paddingLeft: '40px',}}>
-          
-            {loading ? (<p>Loading...</p>
-              ) : error ? (
-                <p>Error: {error}</p>
-              ) : (
-                <ul>
-                  {points.map((centre, index) => {
-                    return (
-                    <li key={index}>
-                      <h3>{Object.keys(centre)[0]}</h3>
-                      <p>Centre: {centre[Object.keys(centre)[0]].name}</p>
-                      <p>Address: {centre[Object.keys(centre)[0]].address}</p>
-                      <p>Contact: {centre[Object.keys(centre)[0]].phone}</p>
-                    </li>
-                    )
-                  })}
-                </ul>
-              )
-            }
-          
-        </div>
-
-        <p style={{display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '80px'}}>The above is to be used as a guide only. Not all suggestions will be relevant or applicable to you.</p>
+        <p style={{display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: '40px'}}>The above is to be used as a guide only. Not all suggestions will be relevant or applicable to you.</p>
         <strong style={{display: 'flex', flexDirection: 'column', alignItems: 'center'}}> Always follow current advice given by emergency services.</strong>
         
       </div>

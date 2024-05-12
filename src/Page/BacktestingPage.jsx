@@ -10,6 +10,7 @@ import DistrictRainfallNum from '../Components/DistrictRainfallNum';
 import DistrictRainfallMap from '../Components/DistrictRainfallMap';
 import DatasetPanel from '../Components/DatasetPanel';
 import DistrictRainfallNumHor from '../Components/DistrictRainfallNumHor';
+import { Link } from 'react-router-dom';
 
 function BacktestingPage() {
 
@@ -19,6 +20,9 @@ function BacktestingPage() {
       <>
       <div>
         <h1>BacktestingPage</h1>
+        <div style={{marginBottom: '20px'}}>
+          <Link to='/monitor'>Monitor Page</Link>  
+        </div>
         <Container>
 
           <Grid container spacing={2}>
