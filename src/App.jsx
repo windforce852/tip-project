@@ -30,7 +30,7 @@ function App() {
   const AdminRoute = ({ children }) => {
     const { auth } = useAuth();
     console.log(JSON.stringify(auth))
-    return auth.token && auth.role === 'Admin' ? children : <Navigate to="/admin-login" />;
+    return auth.token && auth.role === 'Admin' ? children : <Navigate to="/" />;
   };
 
   return (
