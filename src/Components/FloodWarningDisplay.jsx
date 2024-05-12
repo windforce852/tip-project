@@ -5,7 +5,7 @@ import WaterIcon from '@mui/icons-material/Water';
 
 function FloodWarningDisplay() {
 
-  const [ isWarningRelease, setIsWarningRelease ] = useState(false)
+  const [ isWarningRelease, setIsWarningRelease ] = useState(true)
 
   const { currentPercentage, loading, error } = use1hrFloodPercentage2();
 

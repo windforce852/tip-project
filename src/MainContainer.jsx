@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Box, Button, AppBar, Toolbar, Typography, Container } from '@mui/material';
 import { useAuth } from './Components/AuthContext';
+import { Link } from 'react-router-dom';
 
 function MainContainer({ children }) {
 
@@ -26,8 +27,18 @@ function MainContainer({ children }) {
           <Button color="inherit" size="large" onClick={handleBackToLanding}>Flood Prediction System</Button>
 
           <div style={{ marginLeft: 'auto' }}>
-            {(auth.role === 'Admin' || auth.role === 'Citizen') ? (
+            {(auth.role === 'Admin') ? (
               <>
+              <Link to="/monitor" style={{ textDecoration: 'none' }}>
+                <Button color="inherit" style={{ color: 'white' }}>Monitor</Button>
+              </Link>
+              <Button color="inherit" onClick={() => setAuth("", "")}>Logout</Button>
+              </>
+            ) : auth.role === 'Citizen' ? (
+              <>
+              <Link to="/citizen" style={{ textDecoration: 'none' }}>
+                <Button color="inherit" style={{ color: 'white' }}>Home</Button>
+              </Link>
               <Button color="inherit" onClick={() => setAuth("", "")}>Logout</Button>
               </>
             ) : (
