@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useAuth } from './AuthContext';
 import { useNavigate } from 'react-router-dom';
+import RegisterEmailDropdown from './RegisterEmailDropdown';
 
 
 const AuthCardTitle = () => {
@@ -88,6 +89,11 @@ const AuthCard = () => {
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
 
+  const [district, setDistrict] = useState('Islands District');
+  const handleDistrictChange = (newDistrict) => {
+    setDistrict(newDistrict);
+  };
+
   const location = useLocation();
   const { pathname } = location;
 
@@ -119,10 +125,19 @@ const AuthCard = () => {
     }
   };
 
-  const handleCitizenSignupSubmit = (event) => {
+  const handleCitizenSignupSubmit = async (event) => {
     event.preventDefault(); 
-
-    //TODO
+    console.log("Signup: ");
+    console.log(email);
+    console.log(password);
+    console.log(district);
+    console.log(import.meta.env.VITE_TEST_CITIZEN_SIGNUP_ENDPOINT);
+    const success = await CitizenSignup(email, password, 'Citizen', district, import.meta.env.VITE_TEST_CITIZEN_SIGNUP_ENDPOINT );
+    if (success) {
+      navigate('/citizen')
+    } else {
+      console.log('Login failed')
+    }
   };
 
   const { setAuth } = useAuth();
@@ -149,10 +164,42 @@ const AuthCard = () => {
       console.error('Login Error:', error);
       return false;
     }
-
-
-    
   };
+
+  const CitizenSignup = async (email, password, role, district, endpoint) => {
+    try {
+      const name = email.split('@')[0];
+      const bodyData = {
+        name: name,
+        password: password,
+        role: role,
+        email: email,
+        isSubscribe: true, // Always setting isSubscribe to true
+        district: district
+    };
+
+      const response = await fetch( endpoint, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(bodyData),
+      });
+      console.log(JSON.stringify({ email, password }))
+      if (response.ok) {
+        const data = await response.json();
+        
+        const loginSuccess = await Login(email, password, 'Citizen', import.meta.env.VITE_TEST_CITIZEN_LOGIN_ENDPOINT)
+        
+        return true;
+      } else {
+        console.error('Failed to Signup');
+      }
+    } catch(error) {
+      console.error('Signup Error:', error);
+      return false;
+    }
+  }
 
 
   return(
@@ -215,12 +262,15 @@ const AuthCard = () => {
           flexDirection: 'column',
           alignItems: 'center',
         }}>
-          <AuthButton buttonTitle={`Sign up`} onSubmit={handleCitizenSignupSubmit} />
+          <RegisterEmailDropdown onDistrictChange={handleDistrictChange}/>
+          <AuthButton buttonTitle={`Sign up`} onSubmit={handleCitizenSignupSubmit}/>
+
 
           <div style={{ fontSize: '0.8rem', paddingBlockStart: '10px'}}>
             <span>Already have an account? </span>
             <Link to="/citizen-login">Login</Link>
           </div>
+
         </div>
       )}
 
