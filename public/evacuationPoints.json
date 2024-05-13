@@ -3,126 +3,144 @@
     "Central and Western": {
       "name": "Western District Community Centre",
       "address": "36A Western Street, Sai Ying Pun",
-      "phone": "2119 5001"
+      "phone": "2119 5001",
+      "map": "https://www.google.com/maps/place/Western+District+Community+Centre/@22.2859077,114.1382911,17z/data=!3m1!4b1!4m6!3m5!1s0x3403ff812a35be03:0x5693a2fcb1fa1185!8m2!3d22.2859028!4d114.1408714!16s%2Fm%2F080mhzl?entry=ttu"
     }
   },
   {
     "Eastern": {
       "name": "Causeway Bay Community Centre",
       "address": "7 Fook Yum Road, Causeway Bay",
-      "phone": "3104 2304"
+      "phone": "3104 2304",
+      "map": "https://www.google.com/maps/place/Causeway+Bay+Community+Centre,+7+Fook+Yum+Rd,+Causeway+Bay,+Hong+Kong/@22.2884703,114.1884971,17z/data=!3m1!4b1!4m6!3m5!1s0x340400fe0407c919:0x42b98f925fbe00cc!8m2!3d22.2884654!4d114.1910774!16s%2Fg%2F12hkwvm8q?entry=ttu"
     }
   },
   {
     "Southern": {
       "name": "Wah Kwai Community Centre",
       "address": "Wah Kwai Estate, Kellett Bay, Hong Kong",
-      "phone": "2551 0111"
+      "phone": "2551 0111",
+      "map": "https://www.google.com/maps/place/Wah+Kwai+Community+Centre/@22.2502647,114.135511,17z/data=!3m1!4b1!4m6!3m5!1s0x3403fffe825dd573:0xf160b01c4df47e9b!8m2!3d22.2502598!4d114.1380913!16s%2Fg%2F12hkt3mxt?entry=ttu"
     }
   },
   {
     "Wan Chai": {
       "name": "Leighton Hill Community Hall",
       "address": "133 Wong Nai Chung Road, Happy Valley",
-      "phone": "3422 3068"
+      "phone": "3422 3068",
+      "map": "https://www.google.com/maps/place/Leighton+Hill+Community+Hall/@22.2755719,114.1803983,17z/data=!3m1!4b1!4m6!3m5!1s0x34040051ae1d1723:0x494301bd773ddb0!8m2!3d22.275567!4d114.1829786!16s%2Fg%2F1tjs2jvb?entry=ttu"
     }
   },
   {
     "Kowloon City": {
       "name": "Hung Hom Community Hall",
       "address": "UG/F & 1/F, Kowloon City Government Offices, 42 Bailey Street, Hung Hom, Kowloon",
-      "phone": "2365 6475"
+      "phone": "2365 6475",
+      "map": "https://www.google.com/maps/search/Hung+Hom+Community+Hall/@22.3098216,114.1867061,17z/data=!3m1!4b1?entry=ttu"
     }
   },
   {
     "Yau Tsim Mong": {
       "name": "Henry G. Leong Yaumatei Community Centre",
       "address": "60 Public Square Street, Yau Ma Tei",
-      "phone": "2770 0404"
+      "phone": "2770 0404",
+      "map": "https://www.google.com/maps/place/Henry+G.+Leong+Yau+Ma+Tei+Community+Centre/@22.3099257,114.1671553,17z/data=!3m1!4b1!4m6!3m5!1s0x340400c03a28d1f1:0x8224747a82a820f1!8m2!3d22.3099208!4d114.1697356!16s%2Fg%2F1q5d5z_bf?entry=ttu"
     }
   },
   {
     "Sham Shui Po": {
       "name": "Cheung Sha Wan Community Centre",
       "address": "55 Fat Tseung Street, Cheung Sha Wan",
-      "phone": "2361 7787"
+      "phone": "2361 7787",
+      "map": "https://www.google.com/maps/place/Cheung+Sha+Wan+Community+Centre/@22.3399823,114.1561055,17z/data=!3m1!4b1!4m6!3m5!1s0x3404074e6392d277:0x6ea29fdaefab201d!8m2!3d22.3399774!4d114.1586858!16s%2Fg%2F1tf8qq27?entry=ttu"
     }
   },
   {
     "Wong Tai Sin": {
       "name": "Wong Tai Sin Community Centre",
       "address": "104 Ching Tak Street, Wong Tai Sin",
-      "phone": "2323 4347"
+      "phone": "2323 4347",
+      "map": "https://www.google.com/maps/place/Wong+Tai+Sin+Community+Centre,+104+Ching+Tak+St,+Chuk+Un,+Hong+Kong/@22.3409963,114.1915623,17z/data=!3m1!4b1!4m6!3m5!1s0x340406d85373f65d:0x31b2ce2ba41aa158!8m2!3d22.3409914!4d114.1941426!16s%2Fg%2F12hmqk8jn?entry=ttu"
     }
   },
   {
     "Kwun Tong": {
       "name": "Kwun Tong Community Centre",
       "address": "17 Tsui Ping Road, Kwun Tong",
-      "phone": "2345 6739"
+      "phone": "2345 6739",
+      "map": "https://www.google.com/maps/place/Kwun+Tong+Community+Centre/@22.3129153,114.2270258,17z/data=!3m1!4b1!4m6!3m5!1s0x3404015050e21bcf:0x5eb7365fffe36d8b!8m2!3d22.3129104!4d114.2296061!16s%2Fg%2F1tf9w0c5?entry=ttu"
     }
   },
   {
     "Tai Po": {
       "name": "Tai Po Community Centre",
       "address": "No. 2, Heung Sze Wui Street, Tai Po",
-      "phone": "2653 4220"
+      "phone": "2653 4220",
+      "map": "https://www.google.com/maps/place/Tai+Po+Community+Centre,+2+Heung+Sze+Wui+St,+Tai+Po,+Hong+Kong/@22.4467634,114.1634171,17z/data=!3m1!4b1!4m6!3m5!1s0x3404083f0c4f1331:0x64c2ead6b58369fe!8m2!3d22.4467585!4d114.1659974!16s%2Fg%2F12hrm8p4n?entry=ttu"
     }
   },
   {
     "Yuen Long": {
       "name": "Tin Yiu Community Centre",
       "address": "Tin Yiu Estate, Tin Shui Wai",
-      "phone": "2445 4442"
+      "phone": "2445 4442",
+      "map": "https://www.google.com/maps/place/Tin+Yiu+Community+Centre/@22.4503699,114.0017608,17z/data=!3m1!4b1!4m6!3m5!1s0x3403f0811cd58725:0xeb3e22406b59863c!8m2!3d22.450365!4d114.0043411!16s%2Fg%2F12hkg4cq7?entry=ttu"
     }
   },
   {
     "Tuen Mun": {
       "name": "On Ting/Yau Oi Community Centre",
       "address": "On Ting Estate, Tuen Mun",
-      "phone": "2451 9759"
+      "phone": "2451 9759",
+      "map": "https://www.google.com/maps/place/Home+Affairs+Department+On+Ting%2FYau+Oi+Community+Centre/@22.3874595,113.9738905,17z/data=!3m1!4b1!4m6!3m5!1s0x3403fb3e3b1d9189:0x4e4c486f56722879!8m2!3d22.3874546!4d113.9764708!16s%2Fg%2F1tf2685k?entry=ttu"
     }
   },
   {
     "North": {
       "name": "North District Community Centre",
       "address": "2 Lung Wan Street, Sheung Shui",
-      "phone": "2652 6574"
+      "phone": "2652 6574",
+      "map": "https://www.google.com/maps/search/North+District+Community+Centre/@22.5015272,114.1261811,17z/data=!3m1!4b1?entry=ttu"
     }
   },
   {
     "Sai Kung": {
       "name": "King Lam Neighbourhood Community Centre",
       "address": "King Lam Estate, Tseung Kwan O, New Territories",
-      "phone": "2703 5440"
+      "phone": "2703 5440",
+      "map": "https://www.google.com/maps/place/King+Lam+Neighbourhood+Community+Centre/@22.3196839,114.2583517,17z/data=!3m1!4b1!4m6!3m5!1s0x3404040b1df99f71:0x20fa2688f9a56908!8m2!3d22.319679!4d114.260932!16s%2Fg%2F12hky67vm?entry=ttu"
     }
   },
   {
     "Sha Tin": {
       "name": "Heng On Estate Community Centre",
       "address": "Heng On Estate, Ma On Shan",
-      "phone": "2642 5135"
+      "phone": "2642 5135",
+      "map": "https://www.google.com/maps/place/Heng+On+Community+Centre/@22.4172817,114.2242616,17z/data=!3m1!4b1!4m6!3m5!1s0x340408a5fe63f48f:0xad328633008834a5!8m2!3d22.4172768!4d114.2268419!16s%2Fg%2F11bwys5mw6?entry=ttu"
     }
   },
   {
     "Tsuen Wan": {
       "name": "Princess Alexandra Community Centre",
       "address": "60 Tai Ho Road, Tsuen Wan",
-      "phone": "2490 4994"
+      "phone": "2490 4994",
+      "map": "https://www.google.com/maps/place/Princess+Alexandra+Community+Centre/@22.3716276,114.1120921,17z/data=!3m1!4b1!4m6!3m5!1s0x3403f8edd91c3287:0x11fb64e7f67190ca!8m2!3d22.3716227!4d114.1146724!16s%2Fg%2F12hkwhyb1?entry=ttu"
     }
   },
   {
     "Kwai Tsing": {
       "name": "Cheung Ching Community Hall",
       "address": "P1/F, Ching Ho House, Cheung Ching Estate, Tsing Yi",
-      "phone": "2435 3999"
+      "phone": "2435 3999",
+      "map": "https://www.google.com/maps/search/Cheung+Ching+Community+Hall/@22.3553478,114.0601253,14z?entry=ttu"
     }
   },
   {
     "Islands": {
       "name": "Discovery Bay Community Hall",
       "address": "99 Siena Ave, Discovery Bay",
-      "phone": "2259 3252"
+      "phone": "2259 3252",
+      "map": "https://www.google.com/maps/place/Discovery+Bay+Community+Hall,+99+Siena+Ave,+Discovery+Bay,+Hong+Kong/@22.3085027,114.0131881,17z/data=!3m1!4b1!4m6!3m5!1s0x3403fdb2fc0dae6d:0xddbb103bb0fb66b4!8m2!3d22.3084978!4d114.0157684!16s%2Fg%2F12jskjlff?entry=ttu"
     }
   }
 ]
