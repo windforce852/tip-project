@@ -1,7 +1,7 @@
 import { Container, Box, Grid } from '@mui/material';
 import FloodInstruction from '../Components/FloodInstruction';
 import EmailSetting from '../Components/EmailSetting';
-import EvacuationPoints from '../Components/EvacuationPoints';
+import EvacuationPointsChoose from '../Components/EvacuationPointsChoose';
 
 function CitizenHomePage() {
 
@@ -23,7 +23,7 @@ function CitizenHomePage() {
             </Grid>
           
             <Grid item xs={12}>
-              <EvacuationPoints/>
+              <EvacuationPointsChoose/>
             </Grid>
           </Grid>
         </Container>

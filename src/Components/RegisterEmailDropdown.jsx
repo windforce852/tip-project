@@ -14,7 +14,7 @@ function RegisterEmailDropdown({ onDistrictChange }) {
     district: 'Islands District'
   });
   const [subscription, setSubscription] = React.useState('On');
-  const [districtSelected, setDistrictSelected] = React.useState('Islands District');
+  const [districtSelected, setDistrictSelected] = useState('All');
 
   const handleDistrictChange = (event) => {
     const value = event.target.value;
@@ -36,9 +36,10 @@ function RegisterEmailDropdown({ onDistrictChange }) {
             onChange={handleDistrictChange}
             disabled={subscription === "Off"}
           >
-            <MenuItem value={"Islands District"}>Islands District</MenuItem>
+            <MenuItem value={"All"}>All District</MenuItem>
+            <MenuItem value={"Islands"}>Islands District</MenuItem>
             <MenuItem value={"Kwai Tsing"}>Kwai Tsing</MenuItem>
-            <MenuItem value={"North District"}>North District</MenuItem>
+            <MenuItem value={"North"}>North District</MenuItem>
             <MenuItem value={"Sai Kung"}>Sai Kung</MenuItem>
             <MenuItem value={"Sha Tin"}>Sha Tin</MenuItem>
             <MenuItem value={"Tai Po"}>Tai Po</MenuItem>
@@ -50,9 +51,9 @@ function RegisterEmailDropdown({ onDistrictChange }) {
             <MenuItem value={"Sham Shui Po"}>Sham Shui Po</MenuItem>
             <MenuItem value={"Wong Tai Sin"}>Wong Tai Sin</MenuItem>
             <MenuItem value={"Yau Tsim Mong"}>Yau Tsim Mong</MenuItem>
-            <MenuItem value={"Central and Western District"}>Central and Western District</MenuItem>
-            <MenuItem value={"Eastern District"}>Eastern District</MenuItem>
-            <MenuItem value={"Southern District"}>Southern District</MenuItem>
+            <MenuItem value={"Central and Western"}>Central and Western District</MenuItem>
+            <MenuItem value={"Eastern"}>Eastern District</MenuItem>
+            <MenuItem value={"Southern"}>Southern District</MenuItem>
             <MenuItem value={"Wan Chai"}>Wan Chai</MenuItem>
           </Select>
         </FormControl>
