@@ -28,7 +28,7 @@ export function RainfallBoxHor3({ district, rainfall }) {
           marginBlockStart: '0',
           marginBlockEnd: '0'
         }}>
-          {`${rainfall ? rainfall : "rainfall"}`}
+          {`${rainfall ? rainfall : "0"}`}
         </h2>
 
       </div>
@@ -86,6 +86,10 @@ function DistrictRainfallNumHor3({ currentWeather, loading, error }) {
           {Object.entries(currentWeather).map(([district, rainfall]) => (
             district !== "Average Rainfall" && <RainfallBoxHor3 key={district} district={district} rainfall={rainfall} />
           ))}
+          {/* {Object.entries(currentWeather).map(([district, rainfall]) => (
+            district !== "Average Rainfall" && <RainfallBoxHor3 key={district} district={district} rainfall={rainfall || 0} />
+          ))} */}
+
 
         </div>
 

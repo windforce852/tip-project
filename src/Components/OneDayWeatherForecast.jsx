@@ -70,14 +70,14 @@ function OneDayWeatherForecast() {
       <CardContent>
         <Typography variant="h4" style={{fontWeight: 'bold', fontSize:'28px'}}>1 Day Weather Forecast</Typography>
         {/* <h2>One Day Weather </h2> */}
-        <Box sx={{ display: "flex" }}>
+        {/* <Box sx={{ display: "flex" }}>
           <strong>Weather Rating: </strong>
 
           <Typography variant="body2" color="text.secondary" sx={{ ml: 1 }}>
             {weatherRating}
           </Typography>
-        </Box>
-        <Box sx={{ display: "flex" }}>
+        </Box> */}
+        <Box sx={{ display: "flex", marginBlockStart: '2em' }}>
           <strong>Forecast Period: </strong>
 
           <Typography variant="body2" color="text.secondary" sx={{ ml: 1 }}>

@@ -42,8 +42,11 @@ function FloodProbability24hr3({ currentWeather, loading, error }) {
   const adjust = (inputPercentage) => {
     if (inputPercentage > 99) {
       return 99;
+    } 
+    if (inputPercentage >= 0 && inputPercentage <= 99 ) {
+      return inputPercentage
     } else {
-      return inputPercentage;
+      return 0;
     }
   }
 
