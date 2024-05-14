@@ -71,7 +71,7 @@ function FloodWarningTogglePanel() {
   const TogglePanel = () => {
     return (
       <>
-      <p style={{marginBlockEnd: '0.4em', background: '#cf6a06', color: 'white', padding: '6px', borderRadius: '8px', fontWeight: 'bold'}}>
+      <p style={{marginBlockEnd: '0.4em', background: (isWarningRelease ? '#cf6a06' : '#05a15d'), color: 'white', padding: '6px', borderRadius: '8px', fontWeight: 'bold'}}>
         Flood Warning to Public is now: {
           (isWarningRelease == true ) ? "On" : "Off"
         }
