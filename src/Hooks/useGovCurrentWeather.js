@@ -14,8 +14,8 @@ const useGovCurrentWeather = () => {
       try {
         const response = await fetch(apiUrl);
         const data = await response.json();
-        console.log("useGovCurrentWeather Data:")
-        console.log(data)
+        // console.log("useGovCurrentWeather Data:")
+        // console.log(data)
         setCurrentWeather(data);
         setLoading(false);
       } catch (error) {

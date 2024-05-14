@@ -17,8 +17,8 @@ const use1hrFloodPercentage2 = () => {
       try {
         const response = await fetch(apiUrl);
         const responseData = await response.json();
-        console.log("use1hrFloodPercentage Data:");
-        console.log(responseData);
+        // console.log("use1hrFloodPercentage Data:");
+        // console.log(responseData);
 
         const { rainfall } = responseData;
 

@@ -14,8 +14,8 @@ const use1hrFloodPercentage = () => {
       try {
         const response = await fetch(mockURL);
         const data = await response.json();
-        console.log("use1hrFloodPercentage Data:")
-        console.log(data)
+        // console.log("use1hrFloodPercentage Data:")
+        // console.log(data)
         setCurrentPercentage(data);
         setLoading(false);
       } catch (error) {
