@@ -1,16 +1,23 @@
 // import { DatePicker } from '@mui/x-date-pickers/DatePicker';
-import { useState, forwardRef } from "react";
+import { useState, forwardRef, useEffect } from "react";
 import { DatePicker } from "antd";
 import dayjs from 'dayjs';
+import moment from 'moment';
 
-function DateSelector() {
+function DateSelector({setDate}) {
 
-  const [date, setDate] = useState(new Date());
+  useEffect(() => {
+    setDate(moment('2023-09-01').toDate());
+  }, []);
+
   function onChange(date, dateString) {
-    setDate(date);
+    const jsDate = date ? date.toDate() : null
+    setDate(jsDate);
+    console.log(`DateSelector - setDate: ${date}`)
   }
 
-  const maxDate = dayjs('2023-12-31');
+  const minDate = dayjs('2023-09-01')
+  const maxDate = dayjs('2023-09-30');
 
   return (
     <>
@@ -24,22 +31,12 @@ function DateSelector() {
       paddingLeft: '20px',
       borderRadius: '8px',
     }}>
-      {/* <input type='date' id='backtestData' name='backtestData'
-        style={{
-          backgroundColor: '#363636',
-          color: '#2196f3',
-          border: '2px solid #2196f3',
-          borderRadius: '8px',
-          padding: '10px',
-          fontFamily: 'Roboto',
-          fontWeight: 'bold',
-          fontSize: '14px'
-        }}
-      /> */}
 
       <DatePicker 
+        defaultValue={moment('2023-09-01')}
         onChange={onChange} 
         maxDate={maxDate}
+        minDate={minDate}
         style={{
           color: 'black',
           border: "5px solid #purple",
@@ -51,7 +48,7 @@ function DateSelector() {
           color: '#2196f3',
         }}
       >
-        Select a date for backtesting.
+        Select a date.
       </h3>
       <p
         style={{
@@ -59,7 +56,7 @@ function DateSelector() {
           color: 'white',
         }}
       >
-        {`(range from 1-Jan-1970 to 31-Dec-2023)`}
+        {`(range from 1-Sep-2023 to 30-Sep-2023 in UAT enviroment)`}
       </p>
     </div>
     </>

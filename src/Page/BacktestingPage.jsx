@@ -10,11 +10,18 @@ import DistrictRainfallNum from '../Components/DistrictRainfallNum';
 import DistrictRainfallMap from '../Components/DistrictRainfallMap';
 import DatasetPanel from '../Components/DatasetPanel';
 import DistrictRainfallNumHor from '../Components/DistrictRainfallNumHor';
+import DistrictRainfallNumHor3 from '../Components/DistrictRainfallNumHor3';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import useHistDistrictRainfall4 from '../Hooks/useHistDistrictRainfall4';
 
 function BacktestingPage() {
 
   const { rainfall, loading, error } = useHistDistrictRainfall();
+  
+  const [ selectedDate, setSelectedDate ] = useState();
+
+  const { rainfallData, loading4, error4 } = useHistDistrictRainfall4(selectedDate);
 
     return (
       <>
@@ -28,7 +35,7 @@ function BacktestingPage() {
           <Grid container spacing={2}>
             <Grid item xs={12} md={12}>
               <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DateSelector/>
+                <DateSelector setDate={setSelectedDate}/>
               </LocalizationProvider>
             </Grid>
           </Grid>
@@ -59,12 +66,9 @@ function BacktestingPage() {
 
           <Grid container spacing={2}>
             <Grid item xs={12} md={12}>
-              <DistrictRainfallNumHor currentWeather={rainfall} loading={loading} error={error}/>
+              <DistrictRainfallNumHor3 currentWeather={rainfallData} loading={loading} error={error}/>
             </Grid>
 
-            {/* <Grid item xs={12} md={8} style={{ width: "100%", height: "100%" }}>
-              <DistrictRainfallMap/>
-            </Grid> */}
           </Grid>
 
 
