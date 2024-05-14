@@ -72,8 +72,8 @@ function DistrictRainfallMap3() {
 
       try {
         //fetch current weather
-        const weatherResponse = await fetch('/mockCurrentWeather.json');
-        // const weatherResponse = await fetch('https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=en');
+        // const weatherResponse = await fetch('/mockCurrentWeather.json');
+        const weatherResponse = await fetch('https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=en');
         if (!weatherResponse.ok) {
           console.log('Failed to fetch current weather data');
         }
