@@ -20,7 +20,7 @@ function FloodInstruction() {
           <p>Remain indoors unless it is unsafe to do so. Avoid low-lying areas and regions prone to flooding. If you are currently in a flood-prone area, consider relocating to higher ground.</p>
 
           <h2>2. Stay Informed</h2>
-          <p>Continuously monitor local news updates and the <a href="https://www.hko.gov.hk/en/index.html">Hong Kong Observatory's official website</a> for the latest information and advisories.</p>
+          <p>Continuously monitor local news updates and the <a href="https://www.hko.gov.hk/en/index.html" style={{color: 'white'}}>Hong Kong Observatory's official website</a> for the latest information and advisories.</p>
 
           <h2>3. Evacuation Readiness</h2>
           <p>Familiarize yourself with the nearest evacuation points. Be prepared to evacuate promptly if instructed by emergency services. Keep essential items such as medications, important documents, and necessary personal items ready for quick departure.</p>

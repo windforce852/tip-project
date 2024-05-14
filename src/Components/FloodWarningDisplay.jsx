@@ -1,11 +1,17 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Grid } from "@mui/material";
 import use1hrFloodPercentage2 from '../Hooks/use1hrFloodPercentage2';
 import WaterIcon from '@mui/icons-material/Water';
 
 function FloodWarningDisplay() {
 
-  const [ isWarningRelease, setIsWarningRelease ] = useState(true)
+  useEffect(() => {
+    const storedIsReleased = localStorage.getItem('isReleased');
+    // setIsWarningRelease(storedIsReleased);
+    setIsWarningRelease(storedIsReleased === 'true');
+  }, []);
+
+  const [ isWarningRelease, setIsWarningRelease ] = useState('false')
 
   const { currentPercentage, loading, error } = use1hrFloodPercentage2();
 

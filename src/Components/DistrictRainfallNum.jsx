@@ -64,8 +64,8 @@ function DistrictRainfallNum( {currentWeather, loading, error} ) {
     )
   }
 
-  console.log(`"DistrictRainfallNum: `)
-  console.log(currentWeather)
+  // console.log(`"DistrictRainfallNum: `)
+  // console.log(currentWeather)
   const { rainfall } = currentWeather;
   const { data } = rainfall; 
 
