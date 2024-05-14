@@ -40,13 +40,13 @@ function FloodProbability24hr() {
     if (num >= 30 && num <= 49) {
       return "#ffcf33"
     }
-    if (num >= 50 && num <= 99) {
+    if (num >= 50 && num <= 75) {
       return "#ff9100"
     }
-    if (num >= 100) {
+    if (num >= 76) {
       return "#ff1744"
     }
-    if (num <0 ) {
+    if (num < 0) {
       return "#636363"
     }
   }

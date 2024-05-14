@@ -20,6 +20,7 @@ function DatasetPanel() {
     width: 1,
   });
 
+  
   if (loading) {
     return (
       <div style={{ background: '#212121', width: '100%', height: '200px', borderRadius: '8px' }}>
@@ -46,7 +47,7 @@ function DatasetPanel() {
   }
 
   const { data } = datasetList;
-  console.log(`Dataset Panel - data: ${data}`)
+  // console.log(`Dataset Panel - data: ${data}`)
 
   return (
     <>

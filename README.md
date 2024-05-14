@@ -56,3 +56,6 @@ The MainContainer will render LandingPage because the route after localhost:5173
   - Tell the team when you edited the .env
   - Refer to .env and useOpenWeather.js for how to use the keys in .env
   - Search "dotenv"
+
+Addition:
+Clear vite cache - `rm -rf node_modules/.vite/deps`
