@@ -28,7 +28,7 @@ const useHistDistrictRainfall4 = (dateString) => {
   useEffect(() => {
     const fetchData = async () => {
 
-      console.log(`hook4: dateString: ${dateString}`)
+      // console.log(`hook4: dateString: ${dateString}`)
 
       const jsonData = '/districtRainfall-2023-08to09.json'
 
@@ -40,9 +40,9 @@ const useHistDistrictRainfall4 = (dateString) => {
         const year = inputDate.getFullYear();
         const month = inputDate.getMonth() + 1; 
         const day = inputDate.getDate();
-        console.log(`hook4 - year: ${year}`)
-        console.log(`hook4 - month: ${month}`)
-        console.log(`hook4 - day: ${day}`)
+        // console.log(`hook4 - year: ${year}`)
+        // console.log(`hook4 - month: ${month}`)
+        // console.log(`hook4 - day: ${day}`)
 
         const matchingData = data.find(entry => entry.Year === year && entry.Month === month && entry.Day === day);
 
