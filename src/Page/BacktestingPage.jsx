@@ -14,6 +14,7 @@ import DistrictRainfallNumHor3 from '../Components/DistrictRainfallNumHor3';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import useHistDistrictRainfall4 from '../Hooks/useHistDistrictRainfall4';
+import FloodProbability24hr3 from '../Components/FloodProbability24hr3';
 
 function BacktestingPage() {
 
@@ -43,7 +44,7 @@ function BacktestingPage() {
 
           <Grid container spacing={2}>
             <Grid item xs={12} md={6}>
-              <FloodProbability24hr/>
+              <FloodProbability24hr3 currentWeather={rainfallData} loading={loading4} error={error4}/>
             </Grid>
 
             <Grid item xs={12} md={6}>
@@ -66,7 +67,7 @@ function BacktestingPage() {
 
           <Grid container spacing={2}>
             <Grid item xs={12} md={12}>
-              <DistrictRainfallNumHor3 currentWeather={rainfallData} loading={loading} error={error}/>
+              <DistrictRainfallNumHor3 currentWeather={rainfallData} loading={loading4} error={error4}/>
             </Grid>
 
           </Grid>
