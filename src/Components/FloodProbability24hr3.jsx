@@ -91,7 +91,7 @@ function FloodProbability24hr3({ currentWeather, loading, error }) {
             alignItems: 'center'
           }}>
             <p style={{
-              fontSize: '50px',
+              fontSize: '45px',
               fontWeight: 'bold',
               marginBlockStart: '0',
               marginBlockEnd: '0'

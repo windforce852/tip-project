@@ -51,6 +51,7 @@ function App() {
           <Route exact path="/" element={<LandingPage/>} />
           {/* <Route path="/monitor" element={<MonitorPage/>} /> */}
           {/* <Route path="/backtesting" element={<BacktestingPage/>} /> */}
+
           <Route path="/monitor" element={<AdminRoute><MonitorPage /></AdminRoute>} />
           <Route path="/backtesting" element={<AdminRoute><BacktestingPage /></AdminRoute>} />
           <Route path="/citizen" element={<CitizenRoute><CitizenHomePage/></CitizenRoute>} />
