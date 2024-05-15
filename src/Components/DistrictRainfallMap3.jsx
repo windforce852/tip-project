@@ -11,8 +11,7 @@ function DistrictRainfallMap3() {
   const [lng, setLng] = useState(114.1020);
   const [lat, setLat] = useState(22.3350);
   const [zoom, setZoom] = useState(10.0);
-  // const [colorArray, setColorArray] = useState([])
-  // const [districtArray, setDistrictArray] = useState([])
+
 
   // Mapping table for district names
   const districtMapping = {
@@ -62,16 +61,8 @@ function DistrictRainfallMap3() {
 
     map.current.on('load', async() => {
 
-      // //fetch current weather
-      // const weatherResponse = await fetch('/mockCurrentWeather.json');
-      // const weatherData = await weatherResponse.json();
-
-      // //fetch geoJson
-      // const geoResponse = await fetch('/districtsBoundariesIndented.geojson');
-      // const geoData = await geoResponse.json();
-
       try {
-        //fetch current weather
+
         // const weatherResponse = await fetch('/mockCurrentWeather.json');
         const weatherResponse = await fetch('https://data.weather.gov.hk/weatherAPI/opendata/weather.php?dataType=rhrread&lang=en');
         if (!weatherResponse.ok) {

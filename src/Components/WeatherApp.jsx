@@ -57,7 +57,7 @@ function WeatherApp() {
         sx={{
           borderRadius: "8px",
           background: "#212121",
-          minWidth: '600px',
+          minWidth: '400px',
           height: '500px',
           p: 2,
           // backgroundColor: "#e0e0e0",

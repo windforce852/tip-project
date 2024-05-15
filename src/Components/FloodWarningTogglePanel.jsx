@@ -27,20 +27,54 @@ function FloodWarningTogglePanel() {
   }, []);
 
 
+  const sendEmail = async () => {
+    try {
+      const response = await fetch (import.meta.env.VITE_TEST_EMAIL_ENDPOINT);
+      const data = await response.json();
+      console.log('send email response');
+      console.log(data)
+    } catch (error) {
+      console.log(`send email error: ${error}`)
+    }
+  }
+
+  const sendEmail2 = async () => {
+    const timeout = (ms) => new Promise((_, reject) => 
+      setTimeout(() => reject(new Error('Timeout after ' + ms + ' ms')), ms)
+    );
+    try {
+      const response = await Promise.race([
+          fetch(import.meta.env.VITE_TEST_EMAIL_ENDPOINT),
+          timeout(30000)
+      ]);
+      if (!response.ok) {
+          console.log(`HTTP error! status: ${response.status}`);
+      }
+      const data = await response.json();
+      console.log('Send email response:');
+      console.log(data);
+    } catch (error) {
+        console.log(`Send email error: ${error}`);
+    }
+  }
+
   const handleToggle = () => {
     setIsToggleTrigger(prev => !prev)
   };
 
   const handleRelease = () => {
-    console.log('handleRelease fire')
+    // console.log('handleRelease fire')
     const value = inputReleaseRef.current.value;
-    console.log(`inputReleaseRef: ${value}`)
+    // console.log(`inputReleaseRef: ${value}`)
     if(value === 'release') {
       localStorage.setItem('isReleased', 'true');
       setIsWarningRelease(true);
       setWarningMsgInReleaseBox('')
+
+      // sendEmail2()
+
       const storedIsReleased = localStorage.getItem('isReleased');
-      console.log(`localStorage.isReleased is now: ${storedIsReleased}`)
+      // console.log(`localStorage.isReleased is now: ${storedIsReleased}`)
       handleToggle()
     } else {
       setWarningMsgInReleaseBox('**Invalid Input**')
@@ -48,15 +82,15 @@ function FloodWarningTogglePanel() {
   }
 
   const handleStopRelease = () => {
-    console.log('handleStopRelease fire')
+    // console.log('handleStopRelease fire')
     const value = inputStopReleaseRef.current.value;
-    console.log(`inputStopReleaseRef: ${value}`)
+    // console.log(`inputStopReleaseRef: ${value}`)
     if(value === 'stop') {
       localStorage.setItem('isReleased', 'false');
       setIsWarningRelease(false);
       setWarningMsgInStopReleaseBox('')
       const storedIsReleased = localStorage.getItem('isReleased');
-      console.log(`localStorage.isReleased is now: ${storedIsReleased}`)
+      // console.log(`localStorage.isReleased is now: ${storedIsReleased}`)
       handleToggle()
     } else {
       setWarningMsgInStopReleaseBox('**Invalid Input**')
